@@ -6,8 +6,8 @@ RUN set -eux; \
         jq \
         curl \
         ca-certificates; \
-    apk add --repository=http://dl-cdn.alpinelinux.org/alpine/edge/community; \
-        yq
+    apk add --repository=http://dl-cdn.alpinelinux.org/alpine/edge/community \
+        yq;
 
 COPY src/* /
 RUN /install.sh
