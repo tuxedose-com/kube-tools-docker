@@ -9,7 +9,7 @@ RUN set -eux; \
     apk add --repository=http://dl-cdn.alpinelinux.org/alpine/edge/community \
         yq;
 
-COPY src/* /
+COPY scripts/* /
 RUN /install.sh
 
 ENTRYPOINT ["/entrypoint.sh"]
