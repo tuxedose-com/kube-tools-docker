@@ -1,0 +1,12 @@
+name: 'Kubernetes toolset'
+description: 'Github Action with Kubernetes tools: kubectl, kustomize, helm, jq, yq'
+author: 'phantomnat'
+inputs:
+  command:
+    description: 'command to run'
+    required: true
+runs:
+  using: 'docker'
+  image: 'docker://docker.io/tuxedosecom/kube-tools:latest'
+  args:
+    - ${{ inputs.command }}
