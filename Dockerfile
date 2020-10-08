@@ -5,6 +5,7 @@ RUN set -eux; \
         gettext \
         jq \
         curl \
+        bash \
         ca-certificates; \
     apk add --repository=http://dl-cdn.alpinelinux.org/alpine/edge/community \
         yq;
