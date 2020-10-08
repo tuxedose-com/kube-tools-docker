@@ -10,6 +10,9 @@ RUN set -eux; \
         yq;
 
 COPY scripts/* /
-RUN /install.sh
+
+RUN set -eux; \
+    chmod +x /install.sh /entrypoint.sh; \
+    /install.sh
 
 ENTRYPOINT ["/entrypoint.sh"]
